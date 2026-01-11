@@ -39,6 +39,7 @@ local plugins = {
 	require("plugins.conform"),
 	require("plugins.lspconfig"),
 	require("plugins.ts-comments"),
+	require("plugins.godot"),
 }
 
 return plugins
