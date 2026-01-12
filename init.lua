@@ -83,10 +83,30 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+-- Add Mason bin to PATH
+vim.env.PATH = vim.env.PATH .. ':' .. vim.fn.stdpath('data') .. '/mason/bin'
+
 require("options")
 require("mappings")
 require("autocmds")
 require("configs.lazy")
+
+-- Configure rustaceanvim
+vim.g.rustaceanvim = {
+	server = {
+		status_notify_level = false, -- Disable status health check
+		-- settings = {
+		--   ["rust-analyzer"] = {
+		--     checkOnSave = { enable = false }, -- Disable check on save completely
+		--   },
+		-- },
+	},
+	-- lsp = {
+	-- 	ClientOpts = {
+	-- 		showMessage = function() end, -- Disable all LSP messages
+	-- 	},
+	-- },
+}
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

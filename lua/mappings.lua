@@ -85,7 +85,7 @@ map("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 -- == Editor Utilities ==
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>", { desc = "Exit insert mode" })
-map("n", "%", "ggVG", { desc = "Select all" })
+map("n", "<leader>a", "ggVG", { desc = "Select all" })
 
 -- == Commenting ==
 map("n", "<leader>c", "gcc", { desc = "Comment toggle line" })
@@ -112,3 +112,6 @@ map("n", "<leader>o", "<cmd>AerialToggle!<CR>", { desc = "Toggle aerial outline"
 map("n", "<leader>ss", "<cmd>AutoSession save<CR>", { desc = "Save session" })
 map("n", "<leader>sl", "<cmd>AutoSession search<CR>", { desc = "Load session" })
 map("n", "<leader>sd", "<cmd>AutoSession delete<CR>", { desc = "Delete session" })
+
+-- == Insert mode utilities ==
+map("i", "<C-BS>", "<C-w>", { desc = "Delete previous word" })

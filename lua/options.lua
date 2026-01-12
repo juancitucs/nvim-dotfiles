@@ -81,9 +81,9 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
--- Tab settings: 2 spaces for consistency with formatting
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
+-- Tab settings: 4 spaces for consistency with formatting
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 -- Hide end-of-buffer tildes

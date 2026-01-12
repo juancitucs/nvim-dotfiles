@@ -83,10 +83,10 @@ return {
 		end
 
 		-- Mini tabline (commented to use barbar for visual tabs)
-		-- require('mini.tabline').setup()
+		-- require("mini.tabline").setup()
 
 		-- Mini notify (notifications) - commented to use snacks.notifier
-		-- require('mini.notify').setup()
+		-- require("mini.notify").setup()
 
 		-- Mini pick (fuzzy finder)
 		require("mini.pick").setup()

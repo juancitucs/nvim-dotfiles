@@ -167,6 +167,9 @@ return function()
 		},
 		-- gopls = {},
 		basedpyright = {},
+		-- ruff = {
+		-- 	cmd = { "ruff", "server" }, -- Use native ruff server instead of deprecated ruff-lsp
+		-- },
 		-- rust_analyzer = {},
 		-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 		--
