@@ -8,7 +8,7 @@ return {
         dashboard = { enabled = false },
         explorer = { enabled = true }, -- Keep explorer
         indent = { enabled = true }, -- Keep indent
-        input = { enabled = false },
+        input = { enabled = true },
         picker = { enabled = false }, -- Disabled since using fzf-lua
         notifier = { enabled = true }, -- Enable notifier
         quickfile = { enabled = false },

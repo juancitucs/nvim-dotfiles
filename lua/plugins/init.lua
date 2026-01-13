@@ -33,7 +33,7 @@ local plugins = {
     -- Additional recommended plugins
     require("plugins.trouble"),
     require("plugins.harpoon"),
-    require("plugins.noice"),
+    -- require("plugins.noice"),
     -- NOTE: Keep plugin definitions in separate files under lua/plugins/
     -- Do not add inline plugin configs here to maintain organization
     require("plugins.conform"),
