@@ -1,0 +1,11 @@
+-- Plugin: joshuadanpeterson/typewriter.nvim
+-- Installed via store.nvim
+
+return {
+    "joshuadanpeterson/typewriter.nvim",
+    event = "VeryLazy",
+    config = function()
+        require("typewriter").setup()
+    end,
+    opts = {},
+}

@@ -2,5 +2,6 @@
 -- Installed via store.nvim
 
 return {
-	"xzbdmw/colorful-menu.nvim",
+    "xzbdmw/colorful-menu.nvim",
 }
+

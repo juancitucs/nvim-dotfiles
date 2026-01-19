@@ -13,8 +13,30 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
+-- Load all plugins from lua/plugins/ directory
+local plugins = {}
+
+local plugin_dir = vim.fn.stdpath("config") .. "/lua/plugins/"
+local handle = vim.loop.fs_scandir(plugin_dir)
+
+if handle then
+    while true do
+        local name = vim.loop.fs_scandir_next(handle)
+        if not name then
+            break
+        end
+        if name:match("%.lua$") then
+            local plugin_name = name:gsub("%.nvim%.lua$", ""):gsub("%.lua$", "")
+            local ok, plugin = pcall(require, "plugins." .. plugin_name)
+            if ok and plugin then
+                table.insert(plugins, plugin)
+            end
+        end
+    end
+end
+
 -- [[ Configure and install plugins ]]
-require('lazy').setup(require('plugins'), {
+require('lazy').setup(plugins, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table

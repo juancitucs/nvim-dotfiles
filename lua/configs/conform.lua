@@ -59,4 +59,3 @@ local options = {
 -- }
 
 return options
-
